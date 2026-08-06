@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roland Ivan Bukalan | Enterprise Solutions & Power Platform Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Arial', 'sans-serif'],
+                        display: ['Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080c14;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: Arial, sans-serif;
+        }
+        .glass-header {
+            background: rgba(8, 12, 20, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.45);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px -10px rgba(59, 130, 246, 0.18);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080c14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-40 glass-header transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+                        RB
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-lg text-white tracking-wide block leading-none">Roland Ivan Bukalan</span>
+                        <span class="text-[11px] text-blue-400 font-mono tracking-wider uppercase">Enterprise Solutions Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1 text-sm font-medium">
+                    <a href="#about" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">About</a>
+                    <a href="#skills" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Skillset</a>
+                    <a href="#experience" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Experience</a>
+                    <a href="#projects" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Notable Projects</a>
+                    <a href="#contact" class="ml-4 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-600/25 flex items-center gap-2">
+                        <span>Let's Connect</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">About</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Skillset</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Experience</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Notable Projects</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg bg-blue-600 text-white text-center font-semibold">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-16 lg:py-24 overflow-hidden border-b border-slate-800/60">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-blue-600/15 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[450px] h-[320px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        Power Platform & Cloud Systems Specialist
+                    </div>
+
+                    <!-- 3-Second Value Proposition -->
+                    <h1 class="text-4xl sm:text-6xl font-extrabold font-display text-white tracking-tight leading-[1.1]">
+                        I help build <span class="gradient-text">scalable & enterprise</span> solutions.
+                    </h1>
+
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        IT Specialist with expertise in web development, systems integration, low-code automation, and cloud transformations. Transforming business complexity into robust digital architectures.
+                    </p>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-600/25 flex items-center gap-2">
+                            <span>View Notable Projects</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        <button onclick="copyContactEmail()" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold transition flex items-center gap-2">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span id="hero-email-btn-text">Copy Email</span>
+                        </button>
+                    </div>
+
+                    <!-- Key Metrics Bar -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-4" style="width:1200px;">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-white">12+</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Solutions</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-blue-400">Power</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Platform Automation</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-purple-400">Data</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Modeling & Analysis</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-purple-400">Project</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Management</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-purple-400">PKI</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Certificate Management</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual Card -->
+                <div class="lg:col-span-5 relative -mt-12 lg:-mt-20">
+                    <div class="relative glass-card p-4 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden group w-[300px] h-[350px] mx-auto">
+                        <!-- Profile Portrait Container -->
+                        <div class="relative rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center h-full w-full">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQHqzTAqGGyMqg/profile-displayphoto-crop_800_800/B56Z53A20EIEAI-/0/1780113175502?e=1787184000&v=beta&t=F2zn8l8YHlOKyDZ5g6vouo_J9WNEzGjJ1NMdtnePixo" 
+                                 alt="Roland Ivan Bukalan" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    <i class="fa-solid fa-user"></i> About Me
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">
+                    Hello, I'm <span class="text-blue-400">Ivan!</span>
+                </h2>
+                <div class="p-6 glass-card rounded-2xl border border-slate-800 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">LinkedIn Profile</div>
+                            <a href="https://www.linkedin.com/in/rolandivanbukalan/" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-blue-400 transition">
+                                linkedin.com/in/rolandivanbukalan <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-slate-800 space-y-6 leading-relaxed text-slate-300">
+                <p class="text-base text-slate-200 font-medium">
+                    As an IT specialist, I have developed a strong background in web development, systems integration, and cloud technologies.
+                </p>
+                <p class="text-sm text-slate-300">
+                    My career journey has allowed me to lead impactful projects, ranging from cloud transformations to developing enterprise systems. I thrive in dynamic environments where problem-solving, collaboration, and continuous learning are essential to driving business success.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-blue-400 mt-1"></i>
+                        <span class="text-xs text-slate-300"><strong class="text-white block">Enterprise Systems:</strong> End-to-end solutions & maintenance</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-purple-400 mt-1"></i>
+                        <span class="text-xs text-slate-300"><strong class="text-white block">Low-Code & Automation:</strong> Power Automate, Power Apps, Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skillset Section -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
+        <div class="text-left mb-14">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-3">
+                <i class="fa-solid fa-code"></i> Capability Matrix
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Skillset & Expertise</h2>
+            <p class="text-sm text-slate-400 mt-2">Comprehensive tech stack spanning low-code platforms, cloud architecture, and full-stack integration.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Skill Category 1 -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-3">No-Code / Low-Code</h3>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Power Automate</span> <i class="fa-solid fa-check text-blue-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Power Apps</span> <i class="fa-solid fa-check text-blue-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>n8n</span> <i class="fa-solid fa-check text-blue-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Zapier</span> <i class="fa-solid fa-check text-blue-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>iOS Shortcuts</span> <i class="fa-solid fa-check text-blue-400"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-3">Technical Subjects</h3>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Systems Architecture</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>REST API & Microservices</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>PKI Certificate</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Electronic Data Interchange (EDI)</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Connectivities</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-chart-area"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-3">Data Analysis</h3>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>SQL</span> <i class="fa-solid fa-check text-emerald-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Python</span> <i class="fa-solid fa-check text-emerald-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Power BI</span> <i class="fa-solid fa-check text-emerald-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Power Query</span> <i class="fa-solid fa-check text-emerald-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Sharepoint Lists</span> <i class="fa-solid fa-check text-emerald-400"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skill Category 4 -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-3">Artificial Intelligence (AI)</h3>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Microsoft Copilot Studio</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>RESTful API Integration</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>JavaScript / TypeScript</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>HTML5 / CSS3 / Tailwind</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Git & Version Control</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3">
+                    <i class="fa-solid fa-briefcase"></i> Career Journey
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Professional Experience</h2>
+            </div>
+        </div>
+
+        <!-- Experience Timeline Cards -->
+        <div class="space-y-6">
+            <!-- Timeline Item 1 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Cloud Support Manager</h3>
+                    <p class="text-sm font-semibold text-slate-400">OpenText Philippines Inc</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Drive the effective delivery of technical support to consistently meet or exceed SLAs, leveraging quality metrics and customer feedback to champion continuous service improvement.</li>
+                        <li>Maintain and strengthen customer relationships through structured engagement, managing incidents, and handling escalations as a key point of contact.</li>
+                        <li>Provide end-to-end oversight of administrative and talent functions, including hiring, onboarding, training, performance management, and career planning.</li>
+                        <li>Source, process, and model data to build robust reporting dashboards using SQL, Python, and Power BI to deliver data-driven insights for strategic decision-making while ensuring data integrity.</li>
+                        <li>Design, develop, and scale automated workflows, custom applications, and integrations using Power Automate, and Power Apps to optimize cross-functional processes and achieve organizational goals.</li>
+                        <li>Plan, execute, and oversee continuous improvement initiatives from ideation to implementation, managing timelines, risks, and communication for successful goal delivery.</li>
+                        <li>Oversee the end-to-end execution of technical projects, balancing data analysis and automation development with a strong focus on governance, risk management, and information security.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Apr 2023 – Jul 2026
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Customer Operations Program Manager</h3>
+                    <p class="text-sm font-semibold text-slate-400">OpenText Philippines Inc</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Manage a high-performing team handling Incident, Change, and Certificate Renewal management, ensuring the timely delivery of critical customer communications and certificate renewals while strictly adhering to contractual obligations.</li>
+                        <li>Collaborate with cross-functional teams, stakeholders, and senior management to gather essential information for customer notifications, certificate renewals, and to drive business process enhancements.</li>
+                        <li>Provide end-to-end oversight of administrative and talent functions, including hiring, onboarding, training, performance management, career planning, and operational reporting.</li>
+                        <li>Source, process, and model data to build robust reporting dashboards using SQL, Python, and Power BI to deliver data-driven insights for strategic decision-making while ensuring data integrity.</li>
+                        <li>Design, develop, and scale automated workflows, custom applications, and integrations using Power Automate, and Power Apps to optimize cross-functional processes and achieve organizational goals.</li>
+                        <li>Plan, execute, and oversee continuous improvement initiatives from ideation to implementation, managing timelines, risks, and communication for successful goal delivery.</li>
+                        <li>Oversee the end-to-end execution of technical projects, balancing data analysis and automation development with a strong focus on governance, risk management, and information security.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Oct 2021 – Apr 2023
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Senior Customer Operations Project Manager</h3>
+                    <p class="text-sm font-semibold text-slate-400">OpenText Philippines Inc</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Manage the full lifecycle of B2B digital certificates and keys including PKI and X509, AS2, IE/FE, FTPs, SFTP, and SMG by proactively scheduling and tracking renewals to ensure uninterrupted service for all OpenText/GXS and customer transactions.</li>
+                        <li>Drive and improve certificate management processes by enforcing compliance, maintaining accurate documentation, and integrating project management best practices to streamline renewal workflows.</li>
+                        <li>Collaborate with cross-functional teams, to provide timely resolutions for client certificate related issues.</li>
+                        <li>Source, process, and model data to build robust reporting dashboards using SQL, Python, and Power BI, transforming complex datasets into actionable insights that drive continuous process improvements.</li>
+                        <li>Design, develop, and scale automated workflows, custom applications, and integrations using Power Automate, and Power Apps to optimize cross-functional processes and achieve organizational goals.</li>
+                        <li>Oversee the end-to-end execution of technical projects, balancing data analysis and automation development with a strong focus on governance, risk management, and information security.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Jan 2020 – Sep 2021
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Major Incident Communication Specialist</h3>
+                    <p class="text-sm font-semibold text-slate-400">OpenText Philippines Inc</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Serve as the primary Subject Matter Expert (SME) during service interruptions, leading critical conference calls with engineers and leadership to compose and distribute high-level client notifications and website announcements under strict SLOs.</li>
+                        <li>Establish, standardize, and maintain incident communication playbooks while documenting comprehensive post-incident reviews that detail multi-client impacts, timelines, and root-cause issues.</li>
+                        <li>Coordinate team scheduling, shift coverage, and calendar management to seamlessly support a 24x5 operational model with required weekend on-call rotations.</li>
+                        <li>Design and deploy process automations to eliminate manual overhead and optimize daily team efficiency.</li>
+                        <li>Manage end-to-end team growth initiatives by driving the recruitment process and delivering comprehensive technical training programs for new hires.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Sep 2013 – Jan 2020
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Global Service Desk Engineer</h3>
+                    <p class="text-sm font-semibold text-slate-400">Hewlett-Packard Asia Pacific Inc</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Act as the Single Point of Contact (SPOC) for the IT Service Desk, efficiently logging, categorizing, and prioritizing incidents and service requests received via phone, email, or the Remedy ticketing system.</li>
+                        <li>Troubleshoot, diagnose, and resolve complex technical issues across Windows OS, Microsoft Office suites, Active Directory, network infrastructure, shared storage, virtual machines, and hardware components.</li>
+                        <li>Orchestrate and manage the mass silent deployment of software packages across the enterprise environment.</li>
+                        <li>Monitor SLAs proactively, delivering swift resolutions and collaborating with Team Leads and business units to mitigate potential breaches through clear stakeholder communication.</li>
+                        <li>Support the Incident Management framework to rapidly restore disrupted business operations and maintain high availability of IT infrastructure with minimal operational impact.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Feb 2012 – Sep 2013
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">Technical Support Specialist (EDI Analyst)</h3>
+                    <p class="text-sm font-semibold text-slate-400">SPi Global</p>
+                    <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
+                        <li>Serve as the primary technical support point of contact and functional Subject Matter Expert (SME) for core products and services.</li>
+                        <li>Triage, classify, and escalate high-priority issues using a severity matrix, and immediately trigger Major Incident protocols with Incident Management when critical thresholds are breached.</li>
+                        <li>Proactively monitor AS2 communication alerts to rapidly detect, isolate, and troubleshoot failed customer transactions.</li>
+                    </ul>
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Jun 2009 – Feb 2012
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Projects Section -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
+                    <i class="fa-solid fa-cubes"></i> System Portfolio
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Notable Projects</h2>
+            </div>
+
+        </div>
+
+        <!-- Architecture Overview Banner -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-blue-500/20 mb-12 bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/30">
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2 space-y-4">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block">Architecture Approach</span>
+                    <h3 class="text-2xl font-bold font-display text-white">Enterprise Systems Integration Blueprint</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        I build end-to-end solutions that streamline business processes, enabling multiple business applications to communicate and exchange data through Power Automate by establishing relational databases, strong data pipelines, and modeling. This includes creation of reporting dashboards and low-code applications while designing intuitive user interfaces that prioritize exceptional user experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Power Automate</span>
+                        <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Power Apps</span>
+                        <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Sharepoint</span>
+                        <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Power BI</span>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full glass-card p-4 rounded-2xl border border-slate-800 bg-slate-950/80 flex items-center justify-center">
+                    <!-- Interactive Visual Architecture Placeholder -->
+                    <img src="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/sap/media/sap-power-platform-architecture.png" 
+                         alt="System Integration Flowchart" 
+                         class="rounded-xl w-full h-auto object-cover border border-slate-800 hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+
+        <!-- 12 Projects Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
+
+            <!-- Project 01 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">01</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Automated Team Management System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Automated complex enterprise business processes using Power Automate and Dataverse, eliminating manual approvals and paper trails.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-bolt"></i> +80% Efficiency</span>
+                    <button onclick="openCaseStudy('project-1')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 02 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">02</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Automated Business Continuity Plan (BCP) Call Tree</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Automated testing, escalation tree routing, and status response tracking for enterprise Business Continuity Plan drills.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-purple-400 font-semibold"><i class="fa-solid fa-shield-halved"></i> Audit Ready</span>
+                    <button onclick="openCaseStudy('project-2')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 03 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="web">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">03</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Pandemic Online Attendance System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Contactless employee health check-in and location tracking portal built during critical pandemic response periods.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-heart-pulse"></i> 100% Contactless</span>
+                    <button onclick="openCaseStudy('project-3')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 04 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">04</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Centralized Digital Certificate Management System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Enterprise repository tracking SSL/TLS digital certificate lifecycles, authorities, and expiration intervals.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-lock"></i> Zero Downtime</span>
+                    <button onclick="openCaseStudy('project-4')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 05 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">05</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Certificate Database Migration</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Interactive emergency response drill simulator collecting real-time team status reports during disaster drills.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-blue-400 font-semibold"><i class="fa-solid fa-triangle-exclamation"></i> Real-Time Status</span>
+                    <button onclick="openCaseStudy('project-5')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 06 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">06</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Automated Expiring Certificate Notification System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Automated multi-tier notification bot alerting IT infrastructure leads before SSL certificate expirations occur.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-purple-400 font-semibold"><i class="fa-solid fa-bell"></i> 100% Proactive</span>
+                    <button onclick="openCaseStudy('project-6')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 07 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">07</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Vaccine Registration System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Power Apps ticket management application featuring priority routing, SLA tracking timers, and automated escalation.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-ticket"></i> Fast SLA Ticket Times</span>
+                    <button onclick="openCaseStudy('project-7')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 08 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">08</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Notification Requests Application</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Centralized approval hub for submitting, reviewing, and broadcasting company-wide SMS and email announcements.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-bullhorn"></i> Controlled Broadcasts</span>
+                    <button onclick="openCaseStudy('project-8')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 09 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">09</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Automatic Workload Distribution System</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Automated diagnostics platform executing automated functional QA tests across connected TV screens and mobile hardware.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-blue-400 font-semibold"><i class="fa-solid fa-tv"></i> 5x Faster QA</span>
+                    <button onclick="openCaseStudy('project-9')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="web">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">10</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Team Dashboard</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Real-time Power BI executive reporting suite aggregating operational KPIs, system uptime, and project deliverables.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-purple-400 font-semibold"><i class="fa-solid fa-chart-pie"></i> Real-time KPIs</span>
+                    <button onclick="openCaseStudy('project-10')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 11 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">11</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Role Restructure</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        Purchase request, vendor quote comparison, and multi-tier approval portal built with Power Apps and Dataverse.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-cart-shopping"></i> Streamlined Approvals</span>
+                    <button onclick="openCaseStudy('project-11')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 12 -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">12</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Citizen’s AID</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                        End-to-end inventory application tracking hardware assignments, maintenance logs, and lifecycle retirement schedules.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-boxes-stacked"></i> 100% Asset Visibility</span>
+                    <button onclick="openCaseStudy('project-12')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                        Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Case Study Slide-Out Drawer / Modal -->
+    <div id="case-study-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex justify-end transition-opacity">
+        <div class="w-full max-w-2xl bg-slate-900 border-l border-slate-800 h-full overflow-y-auto p-6 sm:p-10 flex flex-col justify-between relative shadow-2xl">
+            
+            <!-- Dynamic Case Study Content Container -->
+            <div id="modal-content" class="space-y-6 pt-4">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="pt-6 mt-8 border-t border-slate-800 flex justify-start items-center">
+                <button onclick="closeCaseStudy()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition">
+                    Close Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-blue-500/20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/40">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                        <i class="fa-regular fa-paper-plane"></i> Let's Connect
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white tracking-tight">
+                        Let's connect and work together!
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Looking for an experienced Power Platform architect, system integration lead, or cloud solutions specialist? Feel free to reach out directly.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 space-y-3">
+                    <!-- Phone Contact -->
+                    <div class="glass-card p-4 rounded-xl border border-slate-800 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider">Phone</div>
+                            <div class="text-sm font-semibold text-white">+63 917 123 4567</div>
+                        </div>
+                    </div>
+
+                    <!-- Email Contact -->
+                    <button onclick="copyContactEmail()" class="w-full glass-card p-4 rounded-xl border border-slate-800 flex items-center justify-between hover:border-blue-500/40 transition group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center font-bold">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-[11px] text-slate-400 uppercase tracking-wider">Direct Email</div>
+                                <div class="text-sm font-semibold text-white" id="contact-email-text">rifbukalan@gmail.com</div>
+                            </div>
+                        </div>
+                        <i class="fa-regular fa-copy text-slate-400 group-hover:text-blue-400 transition"></i>
+                    </button>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/rolandivanbukalan/" target="_blank" rel="noopener" class="glass-card p-4 rounded-xl border border-slate-800 flex items-center justify-between hover:border-blue-500/40 transition group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
+                                <i class="fa-brands fa-linkedin text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-400 uppercase tracking-wider">LinkedIn</div>
+                                <div class="text-sm font-semibold text-white">Roland Ivan Bukalan</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-blue-400 transition"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                
+            </div>
+            <div class="flex items-center gap-4 text-slate-400">
+                <a href="#hero" class="hover:text-white transition">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Real STAR Model Data for Roland Ivan Bukalan's 12 Projects
+        const caseStudiesData = {
+            'project-1': {
+                title: 'Enterprise Workflow System',
+                category: 'Automation & Dataverse',
+                tools: 'Power Automate, Dataverse, Power Apps, SharePoint',
+                challenge: 'Manual business process approvals caused significant operational delays, unstructured audit trails, and multi-day approval turnarounds.',
+                solution: 'Architected a multi-stage automated workflow engine using Power Automate connected to Microsoft Dataverse, enforcing role-based permissions and instant notifications.',
+                impact: 'Reduced approval turnaround times by over 80% while establishing 100% compliant digital audit logs.'
+            },
+            'project-2': {
+                title: 'Automated Business Continuity Plan (BCP) Test Tree',
+                category: 'Risk Management & Power Platform',
+                tools: 'Power Apps Canvas, Power Automate, Azure AD, Teams Integration',
+                challenge: 'Conducting annual BCP emergency tree drills relied on manual phone calls, making it difficult to record real-time team response rates.',
+                solution: 'Engineered an automated escalation and verification test tree that triggers notification cascades across departments with real-time response collection.',
+                impact: 'Streamlined BCP test drills from hours to minutes with automated compliance reporting for executive leadership.'
+            },
+            'project-3': {
+                title: 'Pandemic Online Attendance System',
+                category: 'Health IT & Emergency Response',
+                tools: 'Node.js, React, Web APIs, SQL Database',
+                challenge: 'Urgent requirement during pandemic lockdown to track employee health status, office capacity limits, and contactless check-ins.',
+                solution: 'Designed and deployed a responsive, secure web attendance portal featuring QR-code contactless check-in and automated health declaration forms.',
+                impact: 'Maintained 100% health protocol compliance across all office locations with zero operational downtime.'
+            },
+            'project-4': {
+                title: 'Centralized Digital Certificate Management System',
+                category: 'Security Infrastructure',
+                tools: 'C#, .NET, Azure Key Vault, PowerShell, SQL Server',
+                challenge: 'SSL/TLS certificates were managed across decentralized teams, leading to surprise expirations and security compliance risks.',
+                solution: 'Built a centralized digital certificate vault tracking certificate authorities, encryption keys, IP bindings, and expiration dates.',
+                impact: 'Eliminated unhandled SSL expirations across enterprise domains and simplified annual IT security audits.'
+            },
+            'project-5': {
+                title: 'Earthquake Tabletop Exercise System',
+                category: 'Emergency Preparedness',
+                tools: 'Power Apps Canvas, SharePoint Online, Power BI',
+                challenge: 'Simulating disaster response scenarios required collecting dynamic status reports from dozens of distributed team leaders simultaneously.',
+                solution: 'Created an interactive mobile-ready exercise app where incident commanders submit damage assessments and squad readiness scores during tabletop drills.',
+                impact: 'Provided live crisis management dashboards during company-wide emergency preparedness drills.'
+            },
+            'project-6': {
+                title: 'Automated Expiring Certificate Notification System',
+                category: 'Proactive Monitoring',
+                tools: 'Power Automate, REST APIs, Microsoft Teams Webhooks',
+                challenge: 'Infrastructure engineers needed automated early warnings before critical server domain certificates expired.',
+                solution: 'Developed scheduled automation flows that query certificate expiration timers 60, 30, and 7 days prior, sending targeted alerts to responsible engineers.',
+                impact: 'Achieved 100% proactive certificate renewal compliance across internal and external endpoints.'
+            },
+            'project-7': {
+                title: 'Incident Management System',
+                category: 'IT Service Management',
+                tools: 'Power Apps, SharePoint, Power BI, Azure Logic Apps',
+                challenge: 'Internal IT support tickets were logged informally via email, causing untracked SLAs and inconsistent response times.',
+                solution: 'Built a structured ticketing system in Power Apps with automatic tier-1/tier-2 categorization, SLA countdown timers, and escalations.',
+                impact: 'Reduced mean-time-to-resolution (MTTR) by 45% and improved ticket visibility for department heads.'
+            },
+            'project-8': {
+                title: 'Notification Requests Application',
+                category: 'Enterprise Communications',
+                tools: 'Power Apps, Power Automate, Twilio API, Exchange Online',
+                challenge: 'Sending urgent broadcast announcements required complex manual approvals and disparate messaging platforms.',
+                solution: 'Created a unified request app allowing authorized managers to draft, approve, and schedule multi-channel SMS and email notifications.',
+                impact: 'Standardized enterprise broadcast communications with robust approval governance.'
+            },
+            'project-9': {
+                title: 'Automatic Mobile & TV Hardware Testing Suite',
+                category: 'Hardware & QA Automation',
+                tools: 'JavaScript, Web Automation Tools, Python, REST APIs',
+                challenge: 'Testing digital media app compatibility across numerous smart TVs and mobile devices required tedious manual test script execution.',
+                solution: 'Developed an automated hardware diagnostic testing framework executing synthetic test scripts across connected displays.',
+                impact: 'Accelerated device QA cycles by 5x while standardizing testing criteria.'
+            },
+            'project-10': {
+                title: 'Executive Analytics Dashboard',
+                category: 'Power BI & Data Analytics',
+                tools: 'Power BI, DAX, Azure SQL, Dataverse',
+                challenge: 'Executive leadership lacked real-time visibility into cross-departmental KPIs, project progress, and system uptime metrics.',
+                solution: 'Constructed an executive Power BI reporting suite aggregating multi-source data streams with interactive drill-down filters.',
+                impact: 'Empowered C-suite executives with single-pane-of-glass operational analytics updated automatically.'
+            },
+            'project-11': {
+                title: 'Enterprise Procurement Portal',
+                category: 'Finance & Supply Chain',
+                tools: 'Power Apps Canvas, Dataverse, Power Automate Approvals',
+                challenge: 'Hardware and software procurement requests relied on slow email routing and paper forms.',
+                solution: 'Designed an end-to-end procurement portal with line-item budgets, vendor quote attachments, and multi-level approval hierarchies.',
+                impact: 'Cut procurement lead times from weeks to days with complete spend transparency.'
+            },
+            'project-12': {
+                title: 'IT Assets Lifecycle Tracker',
+                category: 'Asset Management',
+                tools: 'Power Apps, SharePoint Lists, Power Automate, Barcode Scanner',
+                challenge: 'Tracking computer hardware assignments, repairs, and lifecycle retirements across offices was prone to inventory drift.',
+                solution: 'Engineered a mobile barcode-scanning asset tracker connected to central SharePoint lists and automated lifecycle reports.',
+                impact: 'Achieved 100% asset audit accuracy and streamlined device check-in/check-out procedures.'
+            }
+        };
+
+        // Filter Projects by Category
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                btn.classList.add('text-slate-400');
+            });
+
+            if (event && event.target) {
+                event.target.classList.add('active', 'bg-blue-600', 'text-white');
+                event.target.classList.remove('text-slate-400');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Open Case Study Modal
+        function openCaseStudy(projectId) {
+            const project = caseStudiesData[projectId];
+            if (!project) return;
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div>
+                    <span class="text-[11px] uppercase tracking-wider font-bold bg-blue-600/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full">${project.category}</span>
+                    <h2 class="text-2xl font-bold font-display text-white mt-3">${project.title}</h2>
+                    <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-wrench text-blue-400 mr-1"></i> Stack: ${project.tools}</p>
+                </div>
+
+                <div class="space-y-4 pt-2">
+                    <div class="glass-card p-5 rounded-xl border border-slate-800">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-pink-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i> 01. The Challenge</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${project.challenge}</p>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-xl border border-slate-800">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-blue-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-gears"></i> 02. Architecture & Solution</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${project.solution}</p>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-xl border border-slate-800">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-emerald-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-chart-line"></i> 03. Business Impact</h4>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-300 leading-relaxed">${project.impact}</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('case-study-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close Case Study Modal
+        function closeCaseStudy() {
+            document.getElementById('case-study-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Copy Email to Clipboard
+        function copyContactEmail() {
+            const email = "rifbukalan@gmail.com";
+            const textarea = document.createElement('textarea');
+            textarea.value = email;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                document.execCommand('copy');
+                const heroBtn = document.getElementById('hero-email-btn-text');
+                const contactBtn = document.getElementById('contact-email-text');
+                
+                if (heroBtn) heroBtn.innerText = "Email Copied!";
+                if (contactBtn) contactBtn.innerText = "Copied to Clipboard!";
+
+                setTimeout(() => {
+                    if (heroBtn) heroBtn.innerText = "Copy Email";
+                    if (contactBtn) contactBtn.innerText = email;
+                }, 2500);
+            } catch (err) {
+                console.error("Copy failed", err);
+            }
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>

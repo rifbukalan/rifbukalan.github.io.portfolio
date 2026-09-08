@@ -120,13 +120,22 @@
         }
         body .glass-card {
             background-color: #f8fafc;
-            border-color: #e2e8f0;
+            border-color: #dfe7ef;
             box-shadow: 0 4px 12px rgba(100, 116, 139, 0.1);
         }
         body .glass-card:hover,
         body .glass-card.is-expanded {
             background-color: #ffffff;
             border-color: #2563eb;
+        }
+        body .border-slate-800,
+        body .border-slate-800\/60,
+        body .border-slate-800\/80,
+        body .bg-slate-900\/80 {
+            border-color: #dfe7ef !important;
+        }
+        body .bg-slate-900\/80 {
+            background-color: #f8fafc !important;
         }
         body #experience .space-y-6 > .glass-card.is-expanded {
             background-color: #ffffff !important;
@@ -204,6 +213,22 @@
         }
         #experience .space-y-6 > .glass-card ul {
             color: #000000;
+            max-width: 100%;
+            padding-right: 10px;
+        }
+        #experience .space-y-6 > .glass-card li {
+            max-width: 100%;
+            padding-right: 10px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            white-space: normal;
+        }
+        #experience .space-y-6 > .glass-card > div:first-child {
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+        #experience .space-y-6 > .glass-card > div:last-child {
+            flex-shrink: 0;
         }
         #experience .space-y-6 > .glass-card > div:first-child > p {
             color: #1e3a8a;
@@ -252,7 +277,7 @@
                     </div>
                     <div>
                         <span class="font-display font-extrabold text-lg text-white tracking-wide block leading-none">Roland Ivan Bukalan</span>
-                        <span class="text-[11px] text-blue-400 font-mono tracking-wider uppercase">Enterprise Solutions Specialist</span>
+                        <span class="text-[11px] text-blue-400 font-mono font-bold tracking-wider uppercase">Enterprise Solutions Specialist</span>
                     </div>
                 </a>
 
@@ -297,7 +322,7 @@
                 <!-- Left Hero Content -->
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-emerald-500 uppercase tracking-[0.12em] bg-emerald-500/10 border border-emerald-500/30">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                         Power Platform & Cloud Systems Specialist
                     </div>
@@ -365,10 +390,11 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-5 space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+    <section id="about" class="py-20 w-full border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-blue-500 uppercase tracking-[0.12em] bg-blue-500/10 border border-blue-500/30">
                     <i class="fa-solid fa-user"></i> About Me
                 </div>
                 <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">
@@ -389,21 +415,22 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-slate-800 space-y-6 leading-relaxed text-slate-300">
-                <p class="text-base text-slate-200 font-medium">
-                    As an IT specialist, I have developed a strong background in web development, systems integration, and cloud technologies.
-                </p>
-                <p class="text-sm text-slate-300">
-                    My career journey has allowed me to lead impactful projects, ranging from cloud transformations to developing enterprise systems. I thrive in dynamic environments where problem-solving, collaboration, and continuous learning are essential to driving business success.
-                </p>
-                <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-                    <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-check-circle text-blue-400 mt-1"></i>
-                        <span class="text-xs text-slate-300"><strong class="text-white block">Enterprise Systems:</strong> End-to-end solutions & maintenance</span>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-check-circle text-purple-400 mt-1"></i>
-                        <span class="text-xs text-slate-300"><strong class="text-white block">Low-Code & Automation:</strong> Power Automate, Power Apps, Power BI</span>
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-slate-800 space-y-6 leading-relaxed text-black">
+                    <p class="text-base text-black font-medium">
+                        As an IT specialist, I have developed a strong background in web development, systems integration, and cloud technologies.
+                    </p>
+                    <p class="text-sm text-black">
+                        My career journey has allowed me to lead impactful projects, ranging from cloud transformations to developing enterprise systems. I thrive in dynamic environments where problem-solving, collaboration, and continuous learning are essential to driving business success.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-blue-400 mt-1"></i>
+                            <span class="text-xs text-black"><strong class="text-black block">Enterprise Systems:</strong> End-to-end solutions & maintenance</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-purple-400 mt-1"></i>
+                            <span class="text-xs text-black"><strong class="text-black block">Low-Code & Automation:</strong> Power Automate, Power Apps, Power BI</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -411,16 +438,17 @@
     </section>
 
     <!-- Skillset Section -->
-    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
-        <div class="text-left mb-14">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-3">
-                <i class="fa-solid fa-code"></i> Capability Matrix
+    <section id="skills" class="py-20 w-full border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-left mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-violet-500 uppercase tracking-[0.12em] bg-violet-500/10 border border-violet-500/30 mb-3">
+                    <i class="fa-solid fa-code"></i> Capability Matrix
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Skillset & Expertise</h2>
+                <p class="text-sm text-slate-400 mt-2">Comprehensive tech stack spanning low-code platforms, cloud architecture, and full-stack integration.</p>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Skillset & Expertise</h2>
-            <p class="text-sm text-slate-400 mt-2">Comprehensive tech stack spanning low-code platforms, cloud architecture, and full-stack integration.</p>
-        </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Skill Category 1 -->
             <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                 <div>
@@ -488,6 +516,7 @@
                     </ul>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
@@ -495,7 +524,7 @@
     <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-blue-500 uppercase tracking-[0.12em] bg-blue-500/10 border border-blue-500/30 mb-3">
                     <i class="fa-solid fa-briefcase"></i> Career Journey
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Professional Experience</h2>
@@ -622,7 +651,7 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-emerald-500 uppercase tracking-[0.12em] bg-emerald-500/10 border border-emerald-500/30 mb-3">
                     <i class="fa-solid fa-cubes"></i> System Portfolio
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Notable Projects</h2>
@@ -634,7 +663,7 @@
         <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-blue-500/20 mb-12 bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/30">
             <div class="flex flex-col lg:flex-row items-center gap-8">
                 <div class="lg:w-1/2 space-y-4">
-                    <span class="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block">Architecture Approach</span>
+                    <span class="text-sm font-extrabold text-blue-500 uppercase tracking-[0.12em] bg-blue-500/10 border border-blue-500/30 px-3 py-1.5 rounded-full inline-block">Solutions Approach</span>
                     <h3 class="text-2xl font-bold font-display text-white">Enterprise Systems Integration Blueprint</h3>
                     <p class="text-sm text-slate-300 leading-relaxed">
                         I build end-to-end solutions that streamline business processes, enabling multiple business applications to communicate and exchange data through Power Automate by establishing relational databases, strong data pipelines, and modeling. This includes creation of reporting dashboards and low-code applications while designing intuitive user interfaces that prioritize exceptional user experience.
@@ -648,7 +677,7 @@
                 </div>
                 <div class="lg:w-1/2 w-full glass-card p-4 rounded-2xl border border-slate-800 bg-slate-950/80 flex items-center justify-center">
                     <!-- Interactive Visual Architecture Placeholder -->
-                    <img src="Solution%20Approach.jpg" 
+                    <img src="Solutions%20Approach.jpg" 
                          alt="System Integration Flowchart" 
                          class="rounded-xl w-full h-auto object-cover border border-slate-800 hover:scale-105 transition-transform duration-300">
                 </div>
@@ -662,7 +691,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">01</span>
+                        <span class="text-sm font-black text-blue-700 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">01</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Automated Team Management System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -681,7 +710,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">02</span>
+                        <span class="text-sm font-black text-violet-700 bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">02</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Automated Business Continuity Plan (BCP) Call Tree</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -700,7 +729,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="web">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">03</span>
+                        <span class="text-sm font-black text-emerald-700 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">03</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Pandemic Online Attendance System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -719,7 +748,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">04</span>
+                        <span class="text-sm font-black text-amber-700 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">04</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Centralized Digital Certificate Management System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -738,7 +767,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">05</span>
+                        <span class="text-sm font-black text-blue-700 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">05</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Certificate Database Migration</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -757,7 +786,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">06</span>
+                        <span class="text-sm font-black text-violet-700 bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">06</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Automated Expiring Certificate Notification System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -776,7 +805,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">07</span>
+                        <span class="text-sm font-black text-emerald-700 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">07</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Vaccine Registration System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -795,7 +824,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">08</span>
+                        <span class="text-sm font-black text-amber-700 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">08</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Notification Requests Application</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -814,7 +843,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="automation">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-md">09</span>
+                        <span class="text-sm font-black text-blue-700 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">09</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Automatic Workload Distribution System</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -833,7 +862,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="web">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md">10</span>
+                        <span class="text-sm font-black text-violet-700 bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">10</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Team Dashboard</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -852,7 +881,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">11</span>
+                        <span class="text-sm font-black text-emerald-700 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">11</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Role Restructure</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -871,7 +900,7 @@
             <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="powerplatform">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md">12</span>
+                        <span class="text-sm font-black text-amber-700 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">12</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Citizen’s AID</h3>
                     <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
@@ -913,7 +942,7 @@
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 
                 <div class="lg:col-span-7 space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-blue-500 uppercase tracking-[0.12em] bg-blue-500/10 border border-blue-500/30">
                         <i class="fa-regular fa-paper-plane"></i> Let's Connect
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white tracking-tight">
@@ -936,7 +965,7 @@
                                 <div class="text-sm font-semibold text-white">+63 917 123 4567</div>
                             </div>
                         </div>
-                        <i class="fa-solid fa-mobile-screen-button text-slate-400" aria-hidden="true"></i>
+                        <i class="fa-solid fa-phone text-slate-400" aria-hidden="true"></i>
                     </div>
 
                     <!-- Email Contact -->
@@ -946,7 +975,7 @@
                                 <i class="fa-regular fa-envelope"></i>
                             </div>
                             <div class="text-left">
-                                <div class="text-[11px] text-slate-400 uppercase tracking-wider">Direct Email</div>
+                                <div class="text-[11px] text-slate-400 uppercase tracking-wider">Email</div>
                                 <div class="text-sm font-semibold text-white" id="contact-email-text">rifbukalan@gmail.com</div>
                             </div>
                         </div>

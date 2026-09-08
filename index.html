@@ -98,6 +98,14 @@
             background-color: #ffffff;
             color: #111827;
         }
+        .section-blue-tint {
+            background-color: #f8fbff;
+            background-image: radial-gradient(circle at 50% 0%, rgba(219, 234, 254, 0.7), transparent 58%), linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+        }
+        .contact-panel-transparent {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
         .glass-header,
         .glass-card,
         .glass-panel {
@@ -277,17 +285,17 @@
                     </div>
                     <div>
                         <span class="font-display font-extrabold text-lg text-white tracking-wide block leading-none">Roland Ivan Bukalan</span>
-                        <span class="text-[11px] text-blue-400 font-mono font-bold tracking-wider uppercase">Enterprise Solutions Specialist</span>
+                        <span class="text-[11px] text-blue-400 font-mono font-extrabold tracking-wider uppercase">Enterprise Solutions Specialist</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-1 text-sm font-medium">
-                    <a href="#about" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">About</a>
-                    <a href="#skills" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Skillset</a>
-                    <a href="#experience" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Experience</a>
-                    <a href="#projects" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Notable Projects</a>
-                    <a href="#contact" class="ml-4 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-600/25 flex items-center gap-2">
+                <nav class="hidden md:flex items-center gap-1 p-1 rounded-xl bg-slate-100 text-sm font-bold">
+                    <a href="#about" class="px-5 py-2.5 rounded-xl text-slate-800 hover:text-blue-700 hover:bg-white hover:shadow-sm transition">About</a>
+                    <a href="#skills" class="px-5 py-2.5 rounded-xl text-slate-800 hover:text-blue-700 hover:bg-white hover:shadow-sm transition">Skillset</a>
+                    <a href="#experience" class="px-5 py-2.5 rounded-xl text-slate-800 hover:text-blue-700 hover:bg-white hover:shadow-sm transition">Experience</a>
+                    <a href="#projects" class="px-5 py-2.5 rounded-xl text-slate-800 hover:text-blue-700 hover:bg-white hover:shadow-sm transition">Notable Projects</a>
+                    <a href="#contact" class="ml-4 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition shadow-lg shadow-blue-600/25 flex items-center gap-2">
                         <span>Let's Connect</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
@@ -393,14 +401,14 @@
     <section id="about" class="py-20 w-full border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 space-y-4">
+                <div class="lg:col-span-5 space-y-4 self-start">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-blue-500 uppercase tracking-[0.12em] bg-blue-500/10 border border-blue-500/30">
                     <i class="fa-solid fa-user"></i> About Me
                 </div>
-                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white relative top-[18px]">
                     Hello, I'm <span class="text-blue-400">Ivan!</span>
                 </h2>
-                <div class="p-6 glass-card rounded-2xl border border-slate-800 space-y-4">
+                <div class="p-6 glass-card rounded-2xl border border-slate-800 space-y-4 lg:relative lg:top-[68px]">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
                             <i class="fa-brands fa-linkedin text-xl"></i>
@@ -419,7 +427,7 @@
                     <p class="text-base text-black font-medium">
                         As an IT specialist, I have developed a strong background in web development, systems integration, and cloud technologies.
                     </p>
-                    <p class="text-sm text-black">
+                    <p class="text-base text-black font-medium">
                         My career journey has allowed me to lead impactful projects, ranging from cloud transformations to developing enterprise systems. I thrive in dynamic environments where problem-solving, collaboration, and continuous learning are essential to driving business success.
                     </p>
                     <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
@@ -438,7 +446,7 @@
     </section>
 
     <!-- Skillset Section -->
-    <section id="skills" class="py-20 w-full border-b border-slate-800/60">
+    <section id="skills" class="section-blue-tint py-20 w-full border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-left mb-14">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-extrabold text-violet-500 uppercase tracking-[0.12em] bg-violet-500/10 border border-violet-500/30 mb-3">
@@ -450,7 +458,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Skill Category 1 -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between lg:order-1">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-laptop-code"></i>
@@ -467,7 +475,7 @@
             </div>
 
             <!-- Skill Category 2 -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between lg:order-4">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-diagram-project"></i>
@@ -478,13 +486,13 @@
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>REST API & Microservices</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>PKI Certificate</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Electronic Data Interchange</span> <i class="fa-solid fa-check text-purple-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Connectivities</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>HTML5 / CSS3 / Tailwind</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Skill Category 3 -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between lg:order-3">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-chart-area"></i>
@@ -501,7 +509,7 @@
             </div>
 
             <!-- Skill Category 4 -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between lg:order-2">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-database"></i>
@@ -509,10 +517,10 @@
                     <h3 class="text-base font-bold text-white mb-3">Artificial Intelligence (AI)</h3>
                     <ul class="space-y-2 text-xs text-slate-300">
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Microsoft Copilot Studio</span> <i class="fa-solid fa-check text-amber-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>RESTful API Integration</span> <i class="fa-solid fa-check text-amber-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>JavaScript / TypeScript</span> <i class="fa-solid fa-check text-amber-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>HTML5 / CSS3 / Tailwind</span> <i class="fa-solid fa-check text-amber-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Git & Version Control</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Claude Code</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Gemini</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>ChatGPT</span> <i class="fa-solid fa-check text-amber-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Hermes Agent</span> <i class="fa-solid fa-check text-amber-400"></i></li>
                     </ul>
                 </div>
             </div>
@@ -937,8 +945,9 @@
     </div>
 
     <!-- Contact Info Section -->
-    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-blue-500/20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/40">
+    <section id="contact" class="section-blue-tint py-20 w-full px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+        <div class="glass-panel contact-panel-transparent p-8 sm:p-12 rounded-3xl relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/40">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 
                 <div class="lg:col-span-7 space-y-4">
@@ -999,6 +1008,7 @@
 
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -1008,7 +1018,7 @@
                 
             </div>
             <div class="flex items-center gap-4 text-slate-400">
-                <a href="#hero" class="hover:text-white transition">Back to top ↑</a>
+                    <a href="#hero" class="hover:text-blue-600 transition">Back to top ↑</a>
             </div>
         </div>
     </footer>

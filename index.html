@@ -51,10 +51,171 @@
             border: 1px solid rgba(255, 255, 255, 0.07);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        #experience .space-y-6 > .glass-card {
+            cursor: pointer;
+        }
+        #experience .space-y-6 > .glass-card:not(:last-child)::after {
+            content: '\f063';
+            position: absolute;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+            color: #000000;
+            font-family: 'Font Awesome 6 Free';
+            font-size: 16px;
+            font-weight: 900;
+            pointer-events: none;
+            z-index: 1;
+        }
+        #experience .space-y-6 > .glass-card > div:first-child {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        #experience .space-y-6 > .glass-card.is-expanded h3 {
+            width: calc(100% - 300px);
+        }
+        @media (min-width: 768px) {
+            #experience .space-y-6 > .glass-card.is-expanded > div:first-child > ul {
+                width: calc(100% + 220px);
+            }
+            #experience .space-y-6 > .glass-card.is-expanded > div:last-child {
+                transform: none;
+            }
+        }
+        #experience .space-y-6 > .glass-card > div:first-child > ul {
+            max-width: none;
+        }
+        #experience .space-y-6 > .glass-card > div:first-child > ul {
+            display: none;
+        }
+        #experience .space-y-6 > .glass-card.is-expanded > div:first-child > ul {
+            display: block;
+        }
+        #experience .space-y-6 > .glass-card.is-expanded {
+            border-color: #2563eb;
+        }
+        body {
+            background-color: #ffffff;
+            color: #111827;
+        }
+        .glass-header,
+        .glass-card,
+        .glass-panel {
+            background-color: #ffffff;
+            background-image: none;
+            border-color: #e2e8f0;
+            backdrop-filter: none;
+        }
+        .glass-header {
+            border-bottom-color: #e2e8f0;
+        }
         .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.45);
-            transform: translateY(-3px);
-            box-shadow: 0 16px 32px -10px rgba(59, 130, 246, 0.18);
+            border-color: #2563eb;
+            box-shadow: 0 14px 28px -10px rgba(37, 99, 235, 0.3);
+            transform: translateY(-5px);
+        }
+        .glass-card.is-expanded {
+            border-color: #2563eb;
+            box-shadow: 0 10px 24px -10px rgba(37, 99, 235, 0.22);
+        }
+        body .glass-card {
+            background-color: #f8fafc;
+            border-color: #e2e8f0;
+            box-shadow: 0 4px 12px rgba(100, 116, 139, 0.1);
+        }
+        body .glass-card:hover,
+        body .glass-card.is-expanded {
+            background-color: #ffffff;
+            border-color: #2563eb;
+        }
+        body #experience .space-y-6 > .glass-card.is-expanded {
+            background-color: #ffffff !important;
+            border-color: #2563eb !important;
+        }
+        body [class*="bg-slate-"] {
+            background-color: #ffffff;
+        }
+        body [class*="bg-gradient-"] {
+            background-image: none;
+            background-color: #ffffff;
+        }
+        body .text-white {
+            color: #111827;
+        }
+        body .bg-blue-600.text-white,
+        body .bg-blue-500.text-white,
+        body .bg-blue-600 .text-white,
+        body .bg-blue-500 .text-white,
+        body .bg-gradient-to-tr .text-white {
+            color: #ffffff;
+        }
+        body .text-slate-300,
+        body .text-slate-400 {
+            color: #475569;
+        }
+        #hero .pt-8.border-t .text-xs.text-slate-400.mt-0\.5 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        #hero .pt-8.border-t {
+            border-top: 0;
+        }
+        #hero {
+            border-bottom: 0;
+        }
+        @media (min-width: 1024px) {
+            #hero .pt-8.border-t {
+                transform: translateX(-32px);
+            }
+            #hero .pt-8.border-t > div:first-child {
+                transform: translateX(32px);
+            }
+            #hero .pt-8.border-t > div:nth-child(2) {
+                width: calc(100% - 18px);
+                padding-left: 18px;
+                box-sizing: border-box;
+                transform: translateX(-35px);
+            }
+            #hero .pt-8.border-t > div:nth-child(4) > div.text-xs {
+                padding-left: 28px;
+            }
+            #hero .pt-8.border-t > div:nth-child(2) > div.text-xs,
+            #hero .pt-8.border-t > div:nth-child(3) > div.text-xs,
+            #hero .pt-8.border-t > div:nth-child(5) > div.text-xs {
+                padding-left: 28px;
+            }
+            #hero .pt-8.border-t > div:nth-child(3) {
+                transform: translateX(-15px);
+            }
+        }
+        #hero button[onclick="copyContactEmail()"],
+        #hero button[onclick="copyContactEmail()"] i,
+        #hero #hero-email-btn-text {
+            color: #000000;
+        }
+        #about > div > div:last-child > p.text-base {
+            color: #000000;
+        }
+        #about > div > div:last-child > p.text-sm {
+            color: #000000;
+        }
+        #experience .space-y-6 > .glass-card > div:last-child {
+            font-family: Arial, sans-serif;
+        }
+        #experience .space-y-6 > .glass-card ul {
+            color: #000000;
+        }
+        #experience .space-y-6 > .glass-card > div:first-child > p {
+            color: #1e3a8a;
+        }
+        #experience > .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+            margin-top: 32px;
+        }
+        #experience .space-y-6 > .glass-card:not(:last-child)::after {
+            top: calc(100% + 3px);
+            bottom: auto;
+            font-size: 22px;
+            line-height: 26px;
         }
         .gradient-text {
             background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #38bdf8 100%);
@@ -169,19 +330,19 @@
                             <div class="text-xs text-slate-400 mt-0.5">Solutions</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-blue-400">Power</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-blue-400 flex items-center gap-2"><i class="fa-solid fa-bolt text-lg" aria-hidden="true"></i>Power</div>
                             <div class="text-xs text-slate-400 mt-0.5">Platform Automation</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-purple-400">Data</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-purple-400 flex items-center gap-2"><i class="fa-solid fa-chart-line text-lg" aria-hidden="true"></i>Data</div>
                             <div class="text-xs text-slate-400 mt-0.5">Modeling & Analysis</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-emerald-400">Project</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-emerald-400 flex items-center gap-2"><i class="fa-solid fa-diagram-project text-lg" aria-hidden="true"></i>Project</div>
                             <div class="text-xs text-slate-400 mt-0.5">Management</div>
                         </div>
                         <div class="ml-2.5">
-                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-amber-400">PKI</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold font-display text-amber-400 flex items-center gap-2"><i class="fa-solid fa-certificate text-lg" aria-hidden="true"></i>PKI</div>
                             <div class="text-xs text-slate-400 mt-0.5">Certificate Management</div>
                         </div>
                     </div>
@@ -288,7 +449,7 @@
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Systems Architecture</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>REST API & Microservices</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>PKI Certificate</span> <i class="fa-solid fa-check text-purple-400"></i></li>
-                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Electronic Data Interchange (EDI)</span> <i class="fa-solid fa-check text-purple-400"></i></li>
+                        <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Electronic Data Interchange</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                         <li class="flex items-center justify-between bg-slate-900/60 px-2.5 py-1.5 rounded-lg"><span>Connectivities</span> <i class="fa-solid fa-check text-purple-400"></i></li>
                     </ul>
                 </div>
@@ -359,7 +520,7 @@
                     </ul>
                 </div>
                 <div class="text-xs text-slate-400 font-mono whitespace-nowrap bg-slate-900/80 p-3 rounded-xl border border-slate-800 h-fit">
-                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Apr 2023 – Jul 2026
+                    <i class="fa-regular fa-calendar-alt text-white-400 mr-2"></i>Apr 2023 – Aug 2026
                 </div>
             </div>
 
@@ -441,7 +602,7 @@
             <!-- Timeline Item 6 -->
             <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col md:flex-row justify-between gap-6 relative">
                 <div class="space-y-2">
-                    <h3 class="text-xl font-bold text-white">Technical Support Specialist (EDI Analyst)</h3>
+                    <h3 class="text-xl font-bold text-white">Technical Support Specialist</h3>
                     <p class="text-sm font-semibold text-slate-400">SPi Global</p>
                     <ul class="text-sm text-slate-300 max-w-3xl pt-2 list-disc list-inside space-y-3">
                         <li>Serve as the primary technical support point of contact and functional Subject Matter Expert (SME) for core products and services.</li>
@@ -487,7 +648,7 @@
                 </div>
                 <div class="lg:w-1/2 w-full glass-card p-4 rounded-2xl border border-slate-800 bg-slate-950/80 flex items-center justify-center">
                     <!-- Interactive Visual Architecture Placeholder -->
-                    <img src="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/sap/media/sap-power-platform-architecture.png" 
+                    <img src="Solution%20Approach.jpg" 
                          alt="System Integration Flowchart" 
                          class="rounded-xl w-full h-auto object-cover border border-slate-800 hover:scale-105 transition-transform duration-300">
                 </div>
@@ -765,14 +926,17 @@
 
                 <div class="lg:col-span-5 space-y-3">
                     <!-- Phone Contact -->
-                    <div class="glass-card p-4 rounded-xl border border-slate-800 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-phone"></i>
+                    <div class="glass-card p-4 rounded-xl border border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-400 uppercase tracking-wider">Phone</div>
+                                <div class="text-sm font-semibold text-white">+63 917 123 4567</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="text-[11px] text-slate-400 uppercase tracking-wider">Phone</div>
-                            <div class="text-sm font-semibold text-white">+63 917 123 4567</div>
-                        </div>
+                        <i class="fa-solid fa-mobile-screen-button text-slate-400" aria-hidden="true"></i>
                     </div>
 
                     <!-- Email Contact -->
@@ -992,6 +1156,31 @@
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
+
+        // Toggle professional experience details
+        document.querySelectorAll('#experience .space-y-6 > .glass-card').forEach((card) => {
+            const description = card.querySelector('ul');
+            if (!description) return;
+
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-expanded', 'false');
+            description.setAttribute('aria-hidden', 'true');
+
+            const toggleExperienceCard = () => {
+                const isExpanded = card.classList.toggle('is-expanded');
+                card.setAttribute('aria-expanded', String(isExpanded));
+                description.setAttribute('aria-hidden', String(!isExpanded));
+            };
+
+            card.addEventListener('click', toggleExperienceCard);
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleExperienceCard();
+                }
+            });
+        });
 
         // Copy Email to Clipboard
         function copyContactEmail() {
